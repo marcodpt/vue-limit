@@ -1,6 +1,6 @@
 {
   "name": "vue-limit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vue simple array pagination, fully customizable",
   "main": "src/index.vue",
   "repository": {
