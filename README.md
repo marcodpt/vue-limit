@@ -1,5 +1,5 @@
 # vue-limit
-Vue simple array pagination, fully customizable
+Vue simple array pagination, fully customizable  
 [Live Demo](http://marcodpt.github.io/vue-limit)
 
 ## Install
