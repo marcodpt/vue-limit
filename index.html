@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vue Limit</title>
+</head>
+<body style="margin:0;">
+  <div id="app">
+    <div style="color:#f3f3f3;background-color:#666666;padding:20px">
+      <h1 style="margin:0;">Vue Limit</h1>
+    </div>
+    <div style="margin:20px;width:100%">
+      <div style="margin:20px">
+        Page: <input v-model="model.page" />
+        Time: <input v-model="model.time" />
+        Rows: <input v-model="model.rows" />
+      </div>
+      <div style="margin:20px">
+        First: <input v-model="model.firstLabel" />
+        Previous: <input v-model="model.previousLabel" />
+        Label: <input v-model="model.label" />
+        Next: <input v-model="model.nextLabel" />
+        Last: <input v-model="model.lastLabel" />
+      </div>
+      <div style="margin:20px">
+        <vue-limit v-bind="model" :model="model" :input="input" :output="output" />
+      </div>
+      <div style="margin:20px">
+        <ul>
+          <li v-for="out in output">{{out}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
