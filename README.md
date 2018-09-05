@@ -1,5 +1,6 @@
 # vue-limit
 Vue simple array pagination, fully customizable
+[Live Demo](http://marcodpt.github.io/vue-limit)
 
 ## Install
 ```
@@ -70,15 +71,15 @@ npm install --save vue-limit
  - input
    - type: Array
    - default: []
-   - description: Input data, component don't touch in this array, read only
+   - description: Input data, component don't touch in this array, **read only**
  - output
    - type: Array
    - default: []
    - description: You should pass an empty array inside your data scope, this array will be stored result of pagination, observe that in case of objects exact the same object from input will be passed
  - label
    - type: String
-   - default: Page ({{page}} / {{pages}})
-   - description: String that will be used on select, page and pages are the only available variables
+   - default: Page (**{{page}}** / **{{pages}}**)
+   - description: String that will be used on select, **page** and **pages** are the only available variables
  - time
    - type: Number
    - default: 0
@@ -122,13 +123,13 @@ npm install --save vue-limit
    - previous
    - next
    - last
- - slot for substitute the select input, use this slot if you want a simple label or something like input=range
+ - slot for substitute the select input, use this slot if you want a simple **label** or something like **input=range**
    - select
      - scope
        - id: id passed in the props
        - model: model passed in the props
        - label: current label, the same passed in the props but with variable substitution
-       - options: array with {id, label} that generate select
+       - options: **array** with **{id, label}** that generate select
 
     As you can see you can be use any framework you like with very good results  
     And you can be very creative for substitute the select for other thing
