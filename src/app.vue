@@ -11,7 +11,7 @@
         page: 1,
         time: 0,
         rows: 3,
-        label: 'Page ({{page}} / {{pages}})',
+        label: 'Page (${page} / ${pages})',
         firstLabel: 'First',
         previousLabel: 'Previous',
         nextLabel: 'Next',

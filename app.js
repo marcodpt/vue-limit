@@ -19242,7 +19242,7 @@ new _vue2.default({
       page: 1,
       time: 0,
       rows: 3,
-      label: 'Page ({{page}} / {{pages}})',
+      label: 'Page (${page} / ${pages})',
       firstLabel: 'First',
       previousLabel: 'Previous',
       nextLabel: 'Next',
@@ -19303,7 +19303,7 @@ module.exports = {
     },
     label: {
       type: String,
-      default: 'Page ({{page}} / {{pages}})'
+      default: 'Page (${page} / ${pages})'
     },
     time: {
       type: Number,
@@ -19410,7 +19410,7 @@ module.exports = {
       this.setPage('end');
     },
     getLabel: function getLabel(i) {
-      return _libt2.default.compose(_libt2.default.replaceAll('{{pages}}', this.pages), _libt2.default.replaceAll('{{page}}', i))(this.label);
+      return _libt2.default.compose(_libt2.default.replaceAll('${pages}', this.pages), _libt2.default.replaceAll('${page}', i))(this.label);
     },
     getOptions: function getOptions() {
       var options = [];

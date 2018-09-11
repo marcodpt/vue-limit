@@ -21,7 +21,7 @@ npm install --save vue-limit
         page: 1,
         time: 0,
         rows: 3,
-        label: 'Page ({{page}} / {{pages}})',
+        label: 'Page (${page} / ${pages})',
         firstLabel: 'First',
         previousLabel: 'Previous',
         nextLabel: 'Next',
@@ -78,7 +78,7 @@ npm install --save vue-limit
    - description: You should pass an empty array inside your data scope, this array will be stored result of pagination, observe that in case of objects exact the same object from input will be passed
  - label
    - type: String
-   - default: Page (**{{page}}** / **{{pages}}**)
+   - default: Page (**${page}** / **${pages}**)
    - description: String that will be used on select, **page** and **pages** are the only available variables
  - time
    - type: Number

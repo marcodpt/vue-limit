@@ -25,7 +25,7 @@
       },
       label: {
         type: String,
-        default: 'Page ({{page}} / {{pages}})'
+        default: 'Page (${page} / ${pages})'
       },
       time: {
         type: Number,
@@ -131,8 +131,8 @@
       },
       getLabel: function (i) {
         return T.compose(
-          T.replaceAll('{{pages}}', this.pages),
-          T.replaceAll('{{page}}', i)
+          T.replaceAll('${pages}', this.pages),
+          T.replaceAll('${page}', i)
         )(this.label)
       },
       getOptions: function () {
