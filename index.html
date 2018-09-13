@@ -5,32 +5,52 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vue Limit</title>
+  <link rel="stylesheet" type="text/css" href="static/bulma.min.css"/>
+  <link rel="stylesheet" type="text/css" href="static/vue-github-corners.min.css"/>
 </head>
-<body style="margin:0;">
+<body>
   <div id="app">
-    <div style="color:#f3f3f3;background-color:#666666;padding:20px">
-      <h1 style="margin:0;">Vue Limit</h1>
-    </div>
-    <div style="margin:20px;width:100%">
-      <div style="margin:20px">
-        Page: <input v-model="model.page" />
-        Time: <input v-model="model.time" />
-        Rows: <input v-model="model.rows" />
-      </div>
-      <div style="margin:20px">
-        First: <input v-model="model.firstLabel" />
-        Previous: <input v-model="model.previousLabel" />
-        Label: <input v-model="model.label" />
-        Next: <input v-model="model.nextLabel" />
-        Last: <input v-model="model.lastLabel" />
-      </div>
-      <div style="margin:20px">
-        <vue-limit v-bind="model" :model="model" :input="input" :output="output" />
-      </div>
-      <div style="margin:20px">
-        <ul>
-          <li v-for="out in output">{{out}}</li>
-        </ul>
+    <github-corners repo="marcodpt/vue-limit">
+    </github-corners>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Vue Limit
+            </h1>
+            <h2 class="subtitle">
+              Vue simple array pagination, fully customizable
+            </h2>
+          </div>
+        </div>
+      </section>
+      <div class="columns">
+        <div class="column">
+          <div style="margin:20px">
+            <vue-limit v-bind="model" :model="model" :input="input" :output="output" />
+          </div>
+          <div style="margin:20px">
+            <ul>
+              <li v-for="out in output">{{out}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div v-for="field in fields" class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label class="label">{{field}}</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input v-if="field!='time'" class="input" type="text" v-model="model[field]">
+                  <input v-else class="input" type="text" v-model.number="model[field]">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

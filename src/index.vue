@@ -170,7 +170,7 @@
 </script>
 
 <template>
-  <form>
+  <div>
     <button :class="buttonClass" :style="buttonStyle" :disabled="model[id] <= 1" @click="begin">
       <slot name="first">{{firstLabel}}</slot>
     </button>
@@ -192,5 +192,5 @@
     <button :class="buttonClass" :style="buttonStyle" :disabled="model[id] >= pages" @click="end">
       <slot name="last">{{lastLabel}}</slot>
     </button>
-  </form>
+  </div>
 </template>
